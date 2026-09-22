@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Our Sanctuary & Specialists — Luxe Salon</title>
+  <meta name="description" content="Meet our award-winning master stylists, clinical aestheticians, and nail artists. Discover the philosophy behind Luxe Salon." />
+  
+  <!-- OpenGraph & Twitter Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Our Sanctuary & Specialists — Luxe Salon" />
+  <meta property="og:description" content="Meet our award-winning master stylists, clinical aestheticians, and nail artists. Discover the philosophy behind Luxe Salon." />
+  <meta property="og:image" content="images/about.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#fcfaf8" />
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- TOPBAR NAVIGATION -->
+  <header class="topbar" id="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Luxe Salon Home">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>Luxe Salon</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Journal</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Auth Link -->
+        <a href="login.html" class="user-nav-link" id="userNavLink" aria-label="Sign In or Client Profile">
+          <svg class="user-nav-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="navUserName">Sign In</span>
+        </a>
+
+        <!-- Book Visit CTA -->
+        <a href="booking.html" class="btn btn-primary">Book Visit</a>
+
+        <!-- Mobile Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open mobile navigation" aria-expanded="false" aria-controls="mobilePanel">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Panel -->
+    <div class="mobile-panel" id="mobilePanel" role="region" aria-label="Mobile Navigation Menu">
+      <nav aria-label="Mobile Navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services Menu</a>
+        <a href="about.html" class="active">About Sanctuary</a>
+        <a href="gallery.html">Visual Gallery</a>
+        <a href="blog.html">Journal & Advice</a>
+        <a href="contact.html">Contact & Location</a>
+        <a href="booking.html">Book Appointment</a>
+        <a href="login.html">My Account / Sign In</a>
+      </nav>
+      <div class="mobile-currency-wrap">
+        <label for="mobileCurrencySelect">Display Currency</label>
+        <select id="mobileCurrencySelect" class="form-select">
+          <option value="USD">$ USD (US Dollar)</option>
+          <option value="KES">KSh KES (Kenya Shilling)</option>
+          <option value="EUR">€ EUR (Euro)</option>
+          <option value="GBP">£ GBP (British Pound)</option>
+        </select>
+      </div>
+      <a href="booking.html" class="btn btn-primary w-full" style="margin-top: 14px;">Reserve Your Visit</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About Sanctuary</span>
+        </div>
+        <span class="eyebrow">Our Story & Specialists</span>
+        <h1>Where Modern Artistry Meets Calm Ritual</h1>
+        <p>Discover our holistic approach to hair integrity, clinical skin vitality, and bespoke personal care in a tranquil luxury atmosphere.</p>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY SECTION -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">The Philosophy</span>
+          <h2 class="section-title">Unhurried precision, tailored to your natural beauty</h2>
+          <p class="section-lead" style="margin-bottom: 20px;">
+            Founded with the belief that salon appointments should be an antidote to urban rush, Luxe Salon provides private consultation suites, acoustic dampening, and custom aromatherapy to ensure each visit restores your mind and body.
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.7;">
+            We believe that extraordinary styling begins with healthy hair and skin foundations. Our colorists formulate with bond-multiplying polymers that protect cuticle elasticity, while our aesthetic team uses clinical botanicals free from synthetic fragrances and parabens.
+          </p>
+          <div class="btn-row">
+            <a href="services.html" class="btn btn-secondary">Explore Treatments</a>
+            <a href="booking.html" class="btn btn-primary">Reserve Appointment</a>
+          </div>
+        </div>
+
+        <div class="hero-frame">
+          <img src="images/about.jpg" alt="Luxe Salon interior atmosphere" class="hero-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='images/hero.jpg';" />
+          <div class="hero-badge-bottom">
+            <div>
+              <strong style="font-size: 0.95rem; display: block;">The Sanctuary Standard</strong>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">Acoustically treated private washrooms & organic herbal bar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALIST TEAM SECTION -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="text-center" style="max-width: 650px; margin: 0 auto 40px;">
+          <span class="eyebrow">Master Artists</span>
+          <h2 class="section-title">Meet our award-winning resident specialists</h2>
+          <p class="section-lead mx-auto">
+            Decades of international fashion week artistry, trichology certifications, and master color expertise under one roof.
+          </p>
+        </div>
+
+        <div class="team-grid" id="aboutTeamGrid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 CORE PILLARS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto 40px;">
+          <span class="eyebrow">Our Guiding Pillars</span>
+          <h2 class="section-title">The principles that define Luxe Salon</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.8rem; margin-bottom: 12px; color: var(--accent-rose);">🌿</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Clean & Sustainable Formulations</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Exclusively ammonia-free glazes, cold-pressed plant lipids, and eco-certified packaging that honor personal health and environmental sustainability.</p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.8rem; margin-bottom: 12px; color: var(--accent-rose);">📐</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Architectural Consultation</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Every cut and dimensional highlight is engineered around your facial structure, natural hair fall, density, and daily maintenance goals.</p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
+            <div style="font-size: 1.8rem; margin-bottom: 12px; color: var(--accent-rose);">☕</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">Restorative Hospitality</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Enjoy loose-leaf organic herbal teas, sparkling mineral water with fresh botanicals, warm neck towels, and tranquil acoustic background melodies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="margin-bottom: 12px; display: inline-flex;">
+            <span class="brand-mark">L</span>
+            <span>Luxe Salon</span>
+          </a>
+          <p>Haute coiffure, dimensional color, and holistic skin wellness in a serene sanctuary designed for your restorative self-care.</p>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            📍 24 Beauty Avenue, Central City<br>
+            📞 +1 (555) 234-LUXE (5893)
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services & Pricing</a>
+            <a href="about.html">About & Specialists</a>
+            <a href="gallery.html">Lookbook Portfolio</a>
+            <a href="blog.html">Beauty Journal</a>
+            <a href="contact.html">Contact & Hours</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <div class="footer-links">
+            <a href="booking.html">Book Online</a>
+            <a href="booking.html#lookup">Find My Booking</a>
+            <a href="login.html">Client Account</a>
+            <a href="register.html">Create Account</a>
+            <a href="contact.html#faq">FAQs & Policies</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Beauty Newsletter</h4>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 14px;">Subscribe for seasonal style forecasts and exclusive treatment offers.</p>
+          <form class="newsletter-form" style="display: flex; gap: 8px;">
+            <input type="email" placeholder="Your email address" required class="form-input" style="padding: 10px 14px; font-size: 0.85rem;" />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Luxe Salon & Spa Sanctuary. All rights reserved.</span>
+        <div class="footer-bottom-actions">
+          <label for="footerCurrencySelect" class="sr-only">Display Currency</label>
+          <select id="footerCurrencySelect" class="footer-currency-select" aria-label="Select Display Currency">
+            <option value="USD">$ USD</option>
+            <option value="KES">KSh KES</option>
+            <option value="EUR">€ EUR</option>
+            <option value="GBP">£ GBP</option>
+          </select>
+        </div>
+        <span>Crafted for premium Envato Web Theme production.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderTeam('aboutTeamGrid');
+    });
+  </script>
+</body>
+</html>

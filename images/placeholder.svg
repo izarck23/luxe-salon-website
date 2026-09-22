@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5ede6"/>
+      <stop offset="100%" stop-color="#ece0d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="270" r="54" fill="#c59b6d" opacity="0.25"/>
+  <text x="400" y="282" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="600" fill="#2d2926" text-anchor="middle">L</text>
+  <text x="400" y="360" font-family="'Manrope', -apple-system, sans-serif" font-size="20" font-weight="600" letter-spacing="3" fill="#2d2926" text-anchor="middle">LUXE SALON</text>
+  <text x="400" y="390" font-family="'Manrope', -apple-system, sans-serif" font-size="14" fill="#7a7067" text-anchor="middle">Artisanal Hair &amp; Spa Sanctuary</text>
+</svg>

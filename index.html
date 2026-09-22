@@ -1,517 +1,404 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxe Salon — Beauty</title>
-  <meta name="description" content="Professional salon website template built with HTML, CSS and JavaScript." />
+  <title>Luxe Salon — Refined Hair, Beauty & Wellness Sanctuary</title>
+  <meta name="description" content="Luxury salon & spa platform featuring bespoke haircutting, dimensional color, restorative facials, nail rituals, bridal artistry, and seamless online booking." />
+  
+  <!-- OpenGraph & Twitter Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Luxe Salon — Refined Hair, Beauty & Wellness Sanctuary" />
+  <meta property="og:description" content="Luxury salon & spa platform featuring bespoke haircutting, dimensional color, restorative facials, and online booking." />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luxe Salon — Refined Hair, Beauty & Wellness Sanctuary" />
+  <meta name="twitter:description" content="Luxury salon & spa platform featuring bespoke haircutting, dimensional color, and restorative treatments." />
+  <meta name="twitter:image" content="images/hero.jpg" />
+  <meta name="theme-color" content="#fcfaf8" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Luxe Salon",
+    "image": "images/hero.jpg",
+    "telephone": "+1-555-234-5893",
+    "email": "concierge@luxesalon.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "24 Beauty Avenue",
+      "addressLocality": "Central City",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "priceRange": "$$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- TOPBAR NAVIGATION -->
+  <header class="topbar" id="topbar">
     <div class="container nav">
-      <a href="#home" class="brand" aria-label="Luxe Salon home">
-        <span class="brand-mark">L</span>
+      <a href="index.html" class="brand" aria-label="Luxe Salon Home">
+        <span class="brand-mark" aria-hidden="true">L</span>
         <span>Luxe Salon</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#booking">Booking</a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Journal</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#booking" class="btn btn-primary">Book Appointment</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Auth Navigation -->
+        <a href="login.html" class="user-nav-link" id="userNavLink" aria-label="Sign In or Client Profile">
+          <svg class="user-nav-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="navUserName">Sign In</span>
+        </a>
+
+        <!-- Book Visit CTA -->
+        <a href="booking.html" class="btn btn-primary">Book Visit</a>
+
+        <!-- Mobile Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open mobile navigation" aria-expanded="false" aria-controls="mobilePanel">
+          <span></span>
+          <span></span>
           <span></span>
         </button>
       </div>
     </div>
 
-    <div class="mobile-panel" id="mobilePanel">
-      <nav aria-label="Mobile navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#booking">Booking</a>
+    <!-- Mobile Panel -->
+    <div class="mobile-panel" id="mobilePanel" role="region" aria-label="Mobile Navigation Menu">
+      <nav aria-label="Mobile Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services Menu</a>
+        <a href="about.html">About Sanctuary</a>
+        <a href="gallery.html">Visual Gallery</a>
+        <a href="blog.html">Journal & Advice</a>
+        <a href="contact.html">Contact & Location</a>
+        <a href="booking.html">Book Appointment</a>
+        <a href="login.html">My Account / Sign In</a>
       </nav>
+      <div class="mobile-currency-wrap">
+        <label for="mobileCurrencySelect">Display Currency</label>
+        <select id="mobileCurrencySelect" class="form-select">
+          <option value="USD">$ USD (US Dollar)</option>
+          <option value="KES">KSh KES (Kenya Shilling)</option>
+          <option value="EUR">€ EUR (Euro)</option>
+          <option value="GBP">£ GBP (British Pound)</option>
+        </select>
+      </div>
+      <a href="booking.html" class="btn btn-primary w-full" style="margin-top: 14px;">Reserve Your Visit</a>
     </div>
   </header>
 
-  <main>
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-copy stagger">            
-          <span class="eyebrow">Luxury Hair · Beauty · Wellness</span>
-          <h1 class="title">Refined salon care with timeless beauty and care</h1>
-          <p class="lead">
-            Step into a warm, elevated salon experience where precision styling, skin-loving treatments,
-            and calming self-care come together.
+        <div class="hero-copy">
+          <span class="eyebrow">Haute Coiffure · Aesthetics · Spa Sanctuary</span>
+          <h1>Timeless artistry and <span>bespoke care</span> for your hair & skin</h1>
+          <p class="hero-lead">
+            Experience tailored architectural haircutting, luminous French balayage, botanical skin barrier facials, and restorative spa rituals in a serene luxury atmosphere.
           </p>
           <div class="btn-row">
-            <a href="#booking" class="btn btn-primary">Reserve Your Visit</a>
-            <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <a href="booking.html" class="btn btn-primary">Reserve Your Visit</a>
+            <a href="services.html" class="btn btn-secondary">Explore Treatment Menu</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat">
-              <strong>3+</strong>
-              <span>Years of salon excellence</span>
+              <strong>12+</strong>
+              <span>Master Artists</span>
             </div>
             <div class="stat">
-              <strong>3.9/5</strong>
-              <span>Average client satisfaction</span>
+              <strong>4.95/5</strong>
+              <span>Client Rating</span>
             </div>
             <div class="stat">
               <strong>1,800+</strong>
-              <span>Appointments completed yearly</span>
+              <span>Yearly Appointments</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
+        <div class="hero-visual">
           <div class="hero-frame">
-            <div class="signature">Luxe</div>
-            <img src="images/hero.jpg" alt="Elegant salon model" class="hero-photo">
-            <div class="hero-badge">
-              <strong>Signature Finish</strong>
-              <span>Personalized cuts, color and glow-enhancing beauty treatments.</span>
-            </div>
-            <div class="floating-panel">
-              <strong>Open Today</strong>
-              <span>9:00 AM — 7:30 PM<br>Walk-ins welcome based on availability.</span>
+            <img src="images/hero.jpg" alt="Luxe Salon signature styling" class="hero-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='images/about.jpg';" />
+            <div class="hero-badge-bottom">
+              <div class="pulse-indicator" aria-hidden="true"></div>
+              <div>
+                <strong style="font-size: 0.95rem; display: block;">Open Today</strong>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">9:00 AM — 7:00 PM · Walk-ins Welcomed</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      
-        <div class="reveal">
-          <span class="eyebrow">About Us</span>
-          <h2 class="section-title">Where elegant styling meets calm, thoughtful care.</h2>   
-         <div class="container section-grid">
-       <div class="art-panel reveal">
-       <img src="images/about.jpg" alt="Inside Luxe Salon" class="panel-photo">
-       </div>
-          <p class="lead">
-            Luxe Salon is designed for clients who value detail, atmosphere, and consistency.
-            Every appointment is shaped around your features, lifestyle, and personal beauty goals.
-          </p>
-          <p class="lead">
-            Our approach blends trend-aware artistry with timeless refinement, ensuring you leave polished,
-            confident, and completely cared for.
-          </p>
-          <div class="btn-row">
-            <a href="#gallery" class="btn btn-secondary">See Our Space</a>
-            <a href="#booking" class="btn btn-primary">Schedule Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-          
-<!-- SERVICES SECTION -->
-<section class="section" id="services">
-  <div class="container service-layout">
-    <div class="reveal">
-      <span class="eyebrow">Salon Services</span>
-      <h2 class="section-title">Tailored treatments for hair, beauty and total refresh.</h2>
-      <p class="lead">
-        Each service is performed with consultation-first care, premium products, and an emphasis on results.
-      </p>
-
-      <div class="service-list">
-        <article class="service-item">
-          <button class="service-image image-trigger" type="button"
-            data-img="images/haircut-blowout.jpg"
-            data-title="Precision Haircut & Blowout"
-            data-desc="Custom shaping, cleansing ritual, scalp massage and polished finish for every hair type."
-            data-price="$10+">
-            <img src="images/haircut-blowout.jpg" alt="Precision haircut and blowout service">
-          </button>
-
-          <div class="service-number">01</div>
-
-          <div class="service-content">
-            <h3>Precision Haircut & Blowout</h3>
-            <p>Custom shaping, cleansing ritual, scalp massage and polished finish for every hair type.</p>
-          </div>
-
-          <div class="price">$10+</div>
-        </article>
-
-        <article class="service-item">
-          <button class="service-image image-trigger" type="button"
-            data-img="images/color-highlights.jpg"
-            data-title="Color, Highlights & Gloss"
-            data-desc="Dimensional color work with shine-boosting finishes to add depth and softness."
-            data-price="$12-$14+">
-            <img src="images/color-highlights.jpg" alt="Hair color highlights and gloss service">
-          </button>
-
-          <div class="service-number">02</div>
-
-          <div class="service-content">
-            <h3>Color, Highlights & Gloss</h3>
-            <p>Dimensional color work with shine-boosting finishes to add depth and softness.</p>
-          </div>
-
-          <div class="price">$12-$14+</div>
-        </article>
-
-        <article class="service-item">
-          <button class="service-image image-trigger" type="button"
-            data-img="images/facial-skin-revival.jpg"
-            data-title="Facials & Skin Revival"
-            data-desc="Hydrating and balancing facial treatments designed to restore glow."
-            data-price="$10-$20+">
-            <img src="images/facial-skin-revival.jpg" alt="Facial and skin revival treatment">
-          </button>
-
-          <div class="service-number">03</div>
-
-          <div class="service-content">
-            <h3>Facials & Skin Revival</h3>
-            <p>Hydrating and balancing facial treatments designed to restore glow.</p>
-          </div>
-
-          <div class="price">$10-$20+</div>
-        </article>
-
-        <article class="service-item">
-          <button class="service-image image-trigger" type="button"
-            data-img="images/manicure-pedicure.jpg"
-            data-title="Manicure, Pedicure & Nail Care"
-            data-desc="Clean shaping, cuticle care and elevated nail grooming for a refined finish."
-            data-price="$15-$40+">
-            <img src="images/manicure-pedicure.jpg" alt="Manicure and pedicure nail care service">
-          </button>
-
-          <div class="service-number">04</div>
-
-          <div class="service-content">
-            <h3>Manicure, Pedicure & Nail Care</h3>
-            <p>Clean shaping, cuticle care and elevated nail grooming for a refined finish.</p>
-          </div>
-
-          <div class="price">$15-$40+</div>
-        </article>
-
-        <article class="service-item">
-          <button class="service-image image-trigger" type="button"
-            data-img="images/bridal-styling.jpg"
-            data-title="Bridal & Event Styling"
-            data-desc="Elegant styling sessions and beauty preparation for special occasions."
-            data-price="$20-$70+">
-            <img src="images/bridal-styling.jpg" alt="Bridal and event styling service">
-          </button>
-
-          <div class="service-number">05</div>
-
-          <div class="service-content">
-            <h3>Bridal & Event Styling</h3>
-            <p>Elegant styling sessions and beauty preparation for special occasions.</p>
-          </div>
-
-          <div class="price">$20-$70+</div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE MODAL -->
-<div class="service-modal" id="serviceModal" aria-hidden="true">
-  <div class="service-modal__backdrop" id="serviceModalBackdrop"></div>
-
-  <div class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
-    <button class="service-modal__close" type="button" id="serviceModalClose" aria-label="Close modal">×</button>
-
-    <img id="serviceModalImage" src="" alt="">
-    
-    <div class="service-modal__body">
-      <div class="service-modal__top">
-        <h3 id="serviceModalTitle"></h3>
-        <div class="service-modal__price" id="serviceModalPrice"></div>
-      </div>
-
-      <p id="serviceModalDesc"></p>
-
-      <!-- Change href to your booking page / WhatsApp / contact section -->
-      <a href="#contact" class="service-modal__book btn btn-primary" id="serviceModalBookBtn">Book now</a>
-    </div>
-  </div>
-</div>    
-        <aside class="menu-board reveal">
-          <span class="eyebrow">Hours & Care</span>
-          <h3 class="section-title small-title">Visit Us</h3>
-          <p class="lead small-lead">
-            Relaxed ambiance, premium products, and a team focused on making every appointment smooth and beautiful.
-          </p>
-   
-          <div class="hours" aria-label="Opening hours">
-            <div><strong>Monday</strong><span>09:00 — 18:00</span></div>
-            <div><strong>Tuesday</strong><span>09:00 — 19:30</span></div>
-            <div><strong>Wednesday</strong><span>09:00 — 19:30</span></div>
-            <div><strong>Thursday</strong><span>09:00 — 19:30</span></div>
-            <div><strong>Friday</strong><span>09:00 — 20:00</span></div>
-            <div><strong>Saturday</strong><span>08:30 — 18:00</span></div>
-            <div><strong>Sunday</strong><span>10:00 — 15:00</span></div>
-          </div>
-          <div class="btn-row">
-            <a href="#booking" class="btn btn-primary full-btn">Book a Consultation</a>
-          </div>
-        </aside>
-     
-    <section class="section" id="gallery">
+    <!-- CURATED SERVICES SECTION -->
+    <section class="section section-alt">
       <div class="container">
-        <span class="eyebrow reveal">Our Salon Lookbook</span>
-        <h2 class="section-title reveal">A polished atmosphere designed for confidence and care.</h2>
-
-        <div class="gallery-grid top-space">
-          <div class="gallery-box tall reveal">
-            <img src="images/gallery-1.jpg" alt="Salon styling" class="gallery-img">
-            <div class="gallery-caption">
-              <h4>Signature Styling</h4>
-              <p>Soft glamour, dimensional tones, and modern finishes created with a luxury touch.</p>
-            </div>
+        <div class="services-header">
+          <div>
+            <span class="eyebrow">Curated Treatment Menu</span>
+            <h2 class="section-title">Elevated services tailored to your features</h2>
           </div>
-
-          <div class="gallery-stack">
-            <div class="gallery-box soft reveal">
-              <img src="images/gallery-2.jpg" alt="Nail and beauty service" class="gallery-img">
-              <div class="gallery-caption">
-                <h4>Nail & Beauty Rituals</h4>
-                <p>Refined nail care and beauty detailing for a clean, elevated final look.</p>
-              </div>
-            </div>
-            <div class="gallery-box deep reveal">
-              <img src="images/gallery-3.jpg" alt="Spa salon environment" class="gallery-img">
-              <div class="gallery-caption">
-                <h4>Clean and  Calm Environment</h4>
-                <p>A soothing, warm interior that supports rest, beauty and renewal.</p>
-              </div>
-            </div>
-             <div class="gallery-box deep reveal">
-              <img src="images/gallery-4.jpg" alt="Spa salon environment" class="gallery-img">
-              <div class="gallery-caption">
-                <h4>Fast booking of our Services</h4>
-                <p>With luxe salon website, clients can access our services fast with affordable prices through bookings.<br>
-                  We are open at every working hours and get high quality services only at Luxe Salon.
-                </p>
-              </div>
-             </div>
-          </div>
-        </div>
-    
-    </section>
-
-    <section class="section" id="reviews">
-      <div class="container testimonials">
-        <div class="quote-panel reveal">
-          <span class="eyebrow">Client Love</span>
-          <div class="quote-mark">“</div>
-          <h2 class="section-title review-title">Trusted by women who love quality, comfort and consistent results.</h2>
-          <p class="lead full-lead">
-            We believe beauty services should feel calming, personal and expertly delivered.
-          </p>
+          <a href="services.html" class="btn btn-secondary">View Full Menu & Pricing →</a>
         </div>
 
-        <div class="review-list">
-          <article class="review reveal">
-             <div class="service-image">
-            <img src="images/facial-skin-revival.jpg" alt="facial-skin-revival service">
-             </div>
-            <div class="review-top">
-              <div>
-                <h4>Amara K.</h4>
-                <small>Hair Color & Blowout</small>
-              </div>
-              <div class="stars">★★★★★</div>
-            </div>
-            <p>
-              The stylist listened carefully, the finish was flawless,
-              and the atmosphere felt calm and premium from start to end.
-            </p>
-          </article>
-
-          <article class="review reveal">
-             <div class="service-image">
-            <img src="images/person1.jpg" alt="Bridal and event styling service">
-             </div>
-            <div class="review-top">
-              <div>
-                <h4>Nadia S.</h4>
-                <small>Facial Treatment</small>
-              </div>
-              <div class="stars">★★★★★</div>
-            </div>
-            <p>
-              My skin looked brighter immediately after my appointment. The staff were welcoming and highly professional.
-            </p>
-          </article>
-
-          <article class="review reveal">
-             <div class="service-image">
-            <img src="images/person5.jpg" alt="Bridal and event styling service">
-             </div>
-            <div class="review-top">
-              <div>
-                <h4>Esther M.</h4>
-                <small>Bridal Styling</small>
-              </div>
-              <div class="stars">★★★★★</div>
-            </div>
-            <p>
-              Luxe Salon made me feel incredibly beautiful on my event day. Highly recommended for special occasions.
-            </p>
-          </article>
+        <div class="services-grid" id="homeServicesGrid">
+          <!-- Populated by script.js -->
         </div>
       </div>
     </section>
 
-    <section class="section" id="booking">
-      <div class="container booking">
-        <div class="booking-side reveal">
-          <span class="eyebrow light-eyebrow">Book Your Appointment</span>
-          <h2 class="section-title light-title">Reserve a salon experience tailored just for you.</h2>
-          <p>
-            Use the appointment form to request your preferred service, date and time.
+    <!-- ABOUT SANCTUARY TEASER -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Our Philosophy</span>
+          <h2 class="section-title">Where modern artistry meets calm, thoughtful ritual</h2>
+          <p class="section-lead" style="margin-bottom: 20px;">
+            Luxe Salon was founded on the belief that personal care should be unhurried, restorative, and grounded in anatomical precision. We reject one-size-fits-all styling in favor of custom consultations that honor your natural hair texture, skin undertones, and daily life.
           </p>
-
-          <div class="contact-points">
-            <div>
-              <strong>Call Us</strong>
-              <span>+254 789 101 156 12</span>
-            </div>
-            <div>
-              <strong>Email</strong>
-              <span>hello@luxesalon@gamil.com</span>
-            </div>
-            <div>
-              <strong>Location</strong>
-              <span>24 Beauty Avenue, Nairobi/CBD</span>
-            </div>
+          <p style="color: var(--text-secondary); margin-bottom: 28px; line-height: 1.7;">
+            Every formulation we apply is clean, sulfate-free, and cruelty-free—enriched with organic plant lipids, bio-active peptides, and micro-minerals that protect hair and skin integrity for the long term.
+          </p>
+          <div class="btn-row">
+            <a href="about.html" class="btn btn-secondary">Meet Our Specialists</a>
+            <a href="booking.html" class="btn btn-primary">Book Consultation</a>
           </div>
         </div>
 
-        <div class="form-card reveal">
-          <form id="bookingForm">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-              </div>
-
-              <div class="field">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-              </div>
-
-              <div class="field">
-                <label for="service">Service</label>
-                <select id="service" name="service" required>
-                  <option value="">Select a service</option>
-                  <option>Haircut & Blowout</option>
-                  <option>Hair Color & Highlights</option>
-                  <option>Facial Treatment</option>
-                  <option>Manicure & Pedicure</option>
-                  <option>Bridal / Event Styling</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="date">Preferred Date</label>
-                <input type="date" id="date" name="date" required>
-              </div>
-
-              <div class="field">
-                <label for="time">Preferred Time</label>
-                <input type="time" id="time" name="time" required>
-              </div>
-
-              <div class="field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-              </div>
-
-              <div class="field full">
-                <label for="message">Additional Notes</label>
-                <textarea id="message" name="message" placeholder="Tell us anything important about your appointment..."></textarea>
-              </div>
+        <div class="hero-frame">
+          <img src="images/about.jpg" alt="Interior atmosphere of Luxe Salon sanctuary" class="hero-photo" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='images/hero.jpg';" />
+          <div class="hero-badge-bottom">
+            <div>
+              <strong style="font-size: 0.95rem; display: block;">Sanctuary Experience</strong>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">Herbal infusion bar, private wash suites & quiet zone</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="btn-row">
-              <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+    <!-- MASTER SPECIALISTS PREVIEW -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="services-header">
+          <div>
+            <span class="eyebrow">Master Specialists</span>
+            <h2 class="section-title">Meet our resident artists</h2>
+          </div>
+          <a href="about.html" class="btn btn-secondary">View All Specialists →</a>
+        </div>
+
+        <div class="team-grid" id="homeTeamGrid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL GALLERY PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="services-header">
+          <div>
+            <span class="eyebrow">Visual Portfolio</span>
+            <h2 class="section-title">A glimpse inside our transformations</h2>
+          </div>
+          <a href="gallery.html" class="btn btn-secondary">Explore Full Gallery →</a>
+        </div>
+
+        <div class="gallery-grid" id="homeGalleryGrid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT REVIEWS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto 30px;">
+          <span class="eyebrow">Client Reflections</span>
+          <h2 class="section-title">Trusted by discerning clients</h2>
+        </div>
+
+        <div class="reviews-summary-bar">
+          <div class="rating-aggregate">
+            <div class="rating-score">4.95</div>
+            <div>
+              <div class="stars-row">★★★★★</div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Based on 420+ verified client appointments</span>
             </div>
-            <p class="form-note" id="formMessage">We usually respond to booking requests within business hours.</p>
-          </form>
+          </div>
+          <a href="booking.html" class="btn btn-primary">Book Your Experience</a>
+        </div>
+
+        <div class="reviews-grid" id="homeReviewsGrid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL / BLOG HIGHLIGHTS -->
+    <section class="section">
+      <div class="container">
+        <div class="services-header">
+          <div>
+            <span class="eyebrow">Salon Journal</span>
+            <h2 class="section-title">Expert advice & seasonal care</h2>
+          </div>
+          <a href="blog.html" class="btn btn-secondary">Read All Articles →</a>
+        </div>
+
+        <div class="blog-grid" id="homeBlogGrid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CALL TO ACTION -->
+    <section class="section section-alt" style="text-align: center;">
+      <div class="container" style="max-width: 720px;">
+        <span class="eyebrow">Ready for Your Transformation?</span>
+        <h2 class="section-title">Reserve your personalized consultation today</h2>
+        <p class="section-lead mx-auto">
+          Choose your favorite artist, select your preferred date & time, and enjoy a complimentary organic tea ritual upon arrival.
+        </p>
+        <div class="btn-row" style="justify-content: center;">
+          <a href="booking.html" class="btn btn-primary btn-lg">Book Online Now</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Contact Concierge</a>
         </div>
       </div>
     </section>
   </main>
 
-<footer class="site-footer">
-  <div class="container footer-bar">
-    <p>© all rights Reserved.Luxe Salon</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="margin-bottom: 12px; display: inline-flex;">
+            <span class="brand-mark">L</span>
+            <span>Luxe Salon</span>
+          </a>
+          <p>Haute coiffure, dimensional color, and holistic skin wellness in a serene sanctuary designed for your restorative self-care.</p>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            📍 24 Beauty Avenue, Central City<br>
+            📞 +1 (555) 234-LUXE (5893)
+          </div>
+        </div>
 
-    <div class="footer-right">
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#booking">Booking</a>
-        <a href="/terms-of-service">Terms of Service</a>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services & Pricing</a>
+            <a href="about.html">About & Specialists</a>
+            <a href="gallery.html">Lookbook Portfolio</a>
+            <a href="blog.html">Beauty Journal</a>
+            <a href="contact.html">Contact & Hours</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Services</h4>
+          <div class="footer-links">
+            <a href="booking.html">Book Online</a>
+            <a href="booking.html#lookup">Find My Booking</a>
+            <a href="login.html">Client Account</a>
+            <a href="register.html">Create Account</a>
+            <a href="contact.html#faq">FAQs & Policies</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Beauty Newsletter</h4>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 14px;">Subscribe for seasonal style forecasts and exclusive treatment offers.</p>
+          <form class="newsletter-form" style="display: flex; gap: 8px;">
+            <input type="email" placeholder="Your email address" required class="form-input" style="padding: 10px 14px; font-size: 0.85rem;" />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
       </div>
 
-      <div class="social-links" aria-label="Social media links">
-        <a href="#" aria-label="Facebook" class="social-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-            <path d="M13.5 21V13.2H16.1L16.5 10.2H13.5V8.28C13.5 7.41 13.75 6.82 15 6.82H16.6V4.14C16.32 4.1 15.36 4 14.24 4C11.9 4 10.3 5.43 10.3 8.06V10.2H7.7V13.2H10.3V21H13.5Z" fill="currentColor"/>
-          </svg>
-        </a>
-
-        <a href="#" aria-label="Twitter" class="social-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-            <path d="M18.9 5H21.8L15.47 12.24L22.9 19H17.08L12.52 14.9L8.93 19H6.02L12.79 11.26L5.66 5H11.63L15.75 8.73L18.9 5ZM17.88 17.24H19.49L10.75 6.67H9.02L17.88 17.24Z" fill="currentColor"/>
-          </svg>
-        </a>
-
-        <a href="#" aria-label="TikTok" class="social-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-            <path d="M14.92 4C15.28 5.9 16.42 7.33 18 7.96V10.52C16.82 10.48 15.66 10.19 14.62 9.66V14.46C14.62 18.05 12.63 20 9.67 20C6.93 20 5 17.94 5 15.41C5 12.53 7.23 10.54 9.95 10.8V13.31C8.64 12.9 7.52 13.87 7.52 15.19C7.52 16.42 8.37 17.37 9.62 17.37C10.87 17.37 11.95 16.6 11.95 14.49V4H14.92Z" fill="currentColor"/>
-          </svg>
-        </a>
-
-        <a href="#" aria-label="Instagram" class="social-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-            <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
-            <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
-          </svg>
-        </a>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Luxe Salon & Spa Sanctuary. All rights reserved.</span>
+        <div class="footer-bottom-actions">
+          <label for="footerCurrencySelect" class="sr-only">Display Currency</label>
+          <select id="footerCurrencySelect" class="footer-currency-select" aria-label="Select Display Currency">
+            <option value="USD">$ USD</option>
+            <option value="KES">KSh KES</option>
+            <option value="EUR">€ EUR</option>
+            <option value="GBP">£ GBP</option>
+          </select>
+        </div>
+        <span>Crafted for premium Envato Web Theme production.</span>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <script src="script.js">
-
-  
-
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServices('homeServicesGrid', 'all', 3);
+      renderTeam('homeTeamGrid', 3);
+      renderGallery('homeGalleryGrid', 'all');
+      renderReviews('homeReviewsGrid');
+      renderBlog('homeBlogGrid', 3);
+    });
   </script>
 </body>
 </html>

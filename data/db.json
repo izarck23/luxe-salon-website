@@ -1,0 +1,523 @@
+{
+  "users": [
+    {
+      "id": "usr-demo-1",
+      "name": "Isabella Moreau",
+      "email": "demo@luxesalon.com",
+      "phone": "(555) 392-8190",
+      "passwordHash": "ec4c0f499aeb4f2a391058b80b5c86e53a7e50c696f83841d5133e0b98ce097e8cf574a1186aa422f6256b16521500177cfe25cbca800b5873270d34af24aaae",
+      "passwordSalt": "4d68f0683c6f3c529be6b7ad049a4825",
+      "role": "client",
+      "preferredStylist": "stf-1",
+      "hairType": "Wavy / Fine / Color-Treated",
+      "skinType": "Combination / Sensitive",
+      "allergies": "None reported",
+      "loyaltyPoints": 380,
+      "tier": "Luxe Gold Member",
+      "createdAt": "2026-06-01T10:00:00Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-c854328e",
+      "reference": "LX-55236",
+      "userId": null,
+      "clientName": "Jane Doe",
+      "clientEmail": "jane@example.com",
+      "clientPhone": "555-123-4567",
+      "serviceId": "srv-1",
+      "serviceName": "Precision Haircut & Signature Blowout",
+      "staffId": "stf-1",
+      "staffName": "Elena Rostova",
+      "date": "2026-08-30",
+      "time": "10:30",
+      "duration": 75,
+      "price": 110,
+      "addOns": [
+        "Deep Conditioning Moisture Masque"
+      ],
+      "notes": "Please handle carefully",
+      "status": "confirmed",
+      "createdAt": "2026-08-22T12:25:07.270Z"
+    },
+    {
+      "id": "apt-712d7013",
+      "reference": "LX-61520",
+      "userId": null,
+      "clientName": "Sarah Jenkins",
+      "clientEmail": "sarah@example.com",
+      "clientPhone": "(555) 234-5678",
+      "serviceId": "srv-1",
+      "serviceName": "Precision Haircut & Signature Blowout",
+      "staffId": "stf-1",
+      "staffName": "Elena Rostova",
+      "date": "2026-08-25",
+      "time": "14:00",
+      "duration": 60,
+      "price": 110,
+      "addOns": [],
+      "notes": "",
+      "status": "confirmed",
+      "createdAt": "2026-08-22T12:15:30.527Z"
+    },
+    {
+      "id": "apt-101",
+      "reference": "LX-84920",
+      "userId": "usr-demo-1",
+      "clientName": "Isabella Moreau",
+      "clientEmail": "demo@luxesalon.com",
+      "clientPhone": "(555) 392-8190",
+      "serviceId": "srv-1",
+      "serviceName": "Precision Haircut & Signature Blowout",
+      "staffId": "stf-1",
+      "staffName": "Elena Rostova",
+      "date": "2026-08-28",
+      "time": "14:30",
+      "duration": 60,
+      "price": 110,
+      "addOns": [
+        "Deep Conditioning Moisture Masque"
+      ],
+      "notes": "Looking for a slight face-framing layer refresh and glossy finish.",
+      "status": "confirmed",
+      "createdAt": "2026-08-20T14:10:00Z"
+    },
+    {
+      "id": "apt-102",
+      "reference": "LX-71932",
+      "userId": "usr-demo-1",
+      "clientName": "Isabella Moreau",
+      "clientEmail": "demo@luxesalon.com",
+      "clientPhone": "(555) 392-8190",
+      "serviceId": "srv-2",
+      "serviceName": "Dimensional Balayage & Toning Gloss",
+      "staffId": "stf-2",
+      "staffName": "Marcus Vance",
+      "date": "2026-07-15",
+      "time": "11:00",
+      "duration": 150,
+      "price": 220,
+      "addOns": [
+        "Olaplex Intensive Repair Shield"
+      ],
+      "notes": "Summer sun-kissed maintenance.",
+      "status": "completed",
+      "createdAt": "2026-07-02T09:30:00Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "category": "haircuts",
+      "categoryName": "Haircuts & Styling",
+      "name": "Precision Haircut & Signature Blowout",
+      "tagline": "Custom shaping, botanical cleanse, scalp massage & glossy finish",
+      "duration": 60,
+      "price": 85,
+      "image": "/images/haircut-blowout.jpg",
+      "description": "A tailored haircut crafted specifically for your bone structure, hair density, and daily styling routine. Includes a relaxing botanical scalp treatment, shampoo ritual, and high-shine blowout.",
+      "popular": true,
+      "addOns": [
+        {
+          "id": "add-1",
+          "name": "Deep Conditioning Moisture Masque",
+          "price": 25,
+          "duration": 15
+        },
+        {
+          "id": "add-2",
+          "name": "Scalp Detox & Micro-Exfoliation",
+          "price": 30,
+          "duration": 20
+        },
+        {
+          "id": "add-3",
+          "name": "Split-End Sealing Gloss Treatment",
+          "price": 35,
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "srv-2",
+      "category": "color",
+      "categoryName": "Color & Balayage",
+      "name": "Dimensional Balayage & Toning Gloss",
+      "tagline": "Sun-kissed transitions, root melt & bond-protecting glaze",
+      "duration": 150,
+      "price": 180,
+      "image": "/images/color-highlights.jpg",
+      "description": "Hand-painted lightener creating seamless natural dimension and low-maintenance regrowth. Formulated with bond-building plex technology and finished with a bespoke gloss for mirror-like shine.",
+      "popular": true,
+      "addOns": [
+        {
+          "id": "add-4",
+          "name": "Olaplex Intensive Repair Shield",
+          "price": 40,
+          "duration": 15
+        },
+        {
+          "id": "add-5",
+          "name": "Shadow Root Melt Refinement",
+          "price": 45,
+          "duration": 20
+        },
+        {
+          "id": "add-6",
+          "name": "Post-Color Scalp Calming Ritual",
+          "price": 25,
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "id": "srv-3",
+      "category": "color",
+      "categoryName": "Color & Balayage",
+      "name": "Full Single-Process Color & High-Shine Glaze",
+      "tagline": "Rich all-over pigment, grey coverage & protective seal",
+      "duration": 90,
+      "price": 120,
+      "image": "/images/gallery-2.jpg",
+      "description": "Custom ammonia-free permanent or demi-permanent rich color application. Imparts vibrant depth, 100% translucent grey coverage, and nourishing oils for supreme softness.",
+      "popular": false,
+      "addOns": [
+        {
+          "id": "add-1",
+          "name": "Deep Conditioning Moisture Masque",
+          "price": 25,
+          "duration": 15
+        },
+        {
+          "id": "add-4",
+          "name": "Olaplex Intensive Repair Shield",
+          "price": 40,
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "srv-4",
+      "category": "skin",
+      "categoryName": "Facials & Skin Revival",
+      "name": "Luxe Botanical Radiance & Sculpting Facial",
+      "tagline": "Enzyme exfoliation, ultrasonic hydration & lymphatic contouring",
+      "duration": 75,
+      "price": 135,
+      "image": "/images/facial-skin-revival.jpg",
+      "description": "A deeply rejuvenating facial customized to your skin barrier needs. Features triple-phase cleansing, gentle fruit enzymes, ultrasonic serum infusion, ice globe contouring, and cold-pressed botanical oils.",
+      "popular": true,
+      "addOns": [
+        {
+          "id": "add-7",
+          "name": "LED Phototherapy Rejuvenation Mask",
+          "price": 35,
+          "duration": 15
+        },
+        {
+          "id": "add-8",
+          "name": "Collagen Eye & Lip Plumping Treatment",
+          "price": 25,
+          "duration": 10
+        },
+        {
+          "id": "add-9",
+          "name": "Neck & Decollete Lifting Infusion",
+          "price": 40,
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "srv-5",
+      "category": "nails",
+      "categoryName": "Nails & Hand Rituals",
+      "name": "Signature Gel Manicure & Botanical Hand Spa",
+      "tagline": "Precision cuticle grooming, exfoliation & long-wear mineral polish",
+      "duration": 50,
+      "price": 65,
+      "image": "/images/manicure-pedicure.jpg",
+      "description": "Comprehensive nail shaping, detailed cuticle treatment, sweet almond sugar scrub, warm herbal wrap, and non-toxic long-lasting gel application cured under soft LED light.",
+      "popular": false,
+      "addOns": [
+        {
+          "id": "add-10",
+          "name": "Paraffin Warm Wax Moisture Dip",
+          "price": 20,
+          "duration": 15
+        },
+        {
+          "id": "add-11",
+          "name": "French Tip or Minimalist Nail Art",
+          "price": 25,
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "srv-6",
+      "category": "nails",
+      "categoryName": "Nails & Hand Rituals",
+      "name": "Restorative Deluxe Pedicure & Reflexology",
+      "tagline": "Sea salt soak, callus smoothing, mask wrap & tension-release massage",
+      "duration": 65,
+      "price": 85,
+      "image": "/images/gallery-3.jpg",
+      "description": "An indulgent foot sanctuary ritual. Includes eucalyptus mineral soak, smoothing scrub, restorative clay mask with heated booties, and a 20-minute acupressure foot massage.",
+      "popular": false,
+      "addOns": [
+        {
+          "id": "add-10",
+          "name": "Paraffin Warm Wax Moisture Dip",
+          "price": 20,
+          "duration": 15
+        }
+      ]
+    },
+    {
+      "id": "srv-7",
+      "category": "bridal",
+      "categoryName": "Bridal & Occasions",
+      "name": "Couture Bridal Hair & Makeup Trial",
+      "tagline": "Comprehensive styling session, veil placement & longevity setting",
+      "duration": 120,
+      "price": 210,
+      "image": "/images/bridal-styling.jpg",
+      "description": "Detailed pre-wedding consultation exploring updo architectures, textured waves, veil and accessory positioning, plus a full camera-tested luxury makeup application.",
+      "popular": true,
+      "addOns": [
+        {
+          "id": "add-12",
+          "name": "Silk Lash Cluster Application",
+          "price": 30,
+          "duration": 15
+        },
+        {
+          "id": "add-13",
+          "name": "Clip-In Hair Extension Custom Blending",
+          "price": 50,
+          "duration": 25
+        }
+      ]
+    }
+  ],
+  "staff": [
+    {
+      "id": "stf-1",
+      "name": "Elena Rostova",
+      "role": "Creative Director & Master Stylist",
+      "experience": "12+ Years Experience",
+      "bio": "Former Paris Fashion Week stylist specializing in architectural cuts, effortless movement, and modern textured silhouettes.",
+      "image": "/images/person1.jpg",
+      "rating": 4.98,
+      "reviewsCount": 142,
+      "specialties": [
+        "Precision Haircut",
+        "Textured Bob",
+        "Editorial Styling"
+      ],
+      "workingDays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "stf-2",
+      "name": "Marcus Vance",
+      "role": "Master Colorist & Balayage Specialist",
+      "experience": "9 Years Experience",
+      "bio": "Renowned for seamless melt balayage, creamy blondes, and rich warm brunette tones with zero harsh demarcation.",
+      "image": "/images/person5.jpg",
+      "rating": 4.95,
+      "reviewsCount": 118,
+      "specialties": [
+        "Dimensional Balayage",
+        "Color Correction",
+        "Gloss Treatments"
+      ],
+      "workingDays": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "stf-3",
+      "name": "Chloe Chen",
+      "role": "Aesthetics & Skin Health Specialist",
+      "experience": "8 Years Experience",
+      "bio": "Certified clinical aesthetician focusing on holistic skin barrier restoration, deep hydration, and lymphatic drainage.",
+      "image": "/images/person6.jpg",
+      "rating": 4.96,
+      "reviewsCount": 96,
+      "specialties": [
+        "Botanical Facials",
+        "Skin Barrier Revival",
+        "LED Phototherapy"
+      ],
+      "workingDays": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "stf-4",
+      "name": "Sophia Laurent",
+      "role": "Master Nail Artist & Spa Director",
+      "experience": "7 Years Experience",
+      "bio": "Creator of bespoke minimalist nail designs, organic spa rituals, and long-wear precision cuticle care.",
+      "image": "/images/person7.jpg",
+      "rating": 4.92,
+      "reviewsCount": 84,
+      "specialties": [
+        "Gel Manicures",
+        "Deluxe Pedicures",
+        "Nail Art"
+      ],
+      "workingDays": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "stf-5",
+      "name": "David Sterling",
+      "role": "Senior Barber & Texture Specialist",
+      "experience": "10 Years Experience",
+      "bio": "Expert in tailored men’s grooming, classic scissor over comb techniques, hot towel treatments, and natural beard sculpture.",
+      "image": "/images/person8.jpg",
+      "rating": 4.94,
+      "reviewsCount": 104,
+      "specialties": [
+        "Precision Haircut",
+        "Texture Styling",
+        "Beard Grooming"
+      ],
+      "workingDays": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "stf-6",
+      "name": "Amara Diallo",
+      "role": "Bridal & Occasion Artistry Lead",
+      "experience": "11 Years Experience",
+      "bio": "Crafts ethereal, long-lasting wedding day beauty looks, romantic waves, and camera-ready luxury finishes.",
+      "image": "/images/person9.jpg",
+      "rating": 4.99,
+      "reviewsCount": 130,
+      "specialties": [
+        "Bridal Styling",
+        "Occasion Waves",
+        "Luxury Makeup"
+      ],
+      "workingDays": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "author": "Isabella Moreau",
+      "avatar": "/images/person1.jpg",
+      "rating": 5,
+      "service": "Dimensional Balayage & Toning Gloss",
+      "date": "2026-08-14",
+      "text": "Elena and Marcus transformed my dull hair into the most luminous, sun-kissed blonde I have ever had. The consultation was thorough, the space is peaceful, and the finish lasts weeks.",
+      "verified": true
+    },
+    {
+      "id": "rev-2",
+      "author": "Julian Thorne",
+      "avatar": "/images/person8.jpg",
+      "rating": 5,
+      "service": "Precision Haircut & Signature Blowout",
+      "date": "2026-08-08",
+      "text": "Impeccable attention to detail. David understood exactly how my thick hair behaves and shaped it with flawless symmetry. The scalp massage with botanical oils is worth it alone.",
+      "verified": true
+    },
+    {
+      "id": "rev-3",
+      "author": "Claire Sterling",
+      "avatar": "/images/person6.jpg",
+      "rating": 5,
+      "service": "Luxe Botanical Radiance Facial",
+      "date": "2026-07-29",
+      "text": "My skin was visibly glowing for days following Chloe’s radiance facial. The gentle ice globes and lymphatic drainage relieved so much facial tension. A truly five-star experience.",
+      "verified": true
+    },
+    {
+      "id": "rev-4",
+      "author": "Maya Lin",
+      "avatar": "/images/person7.jpg",
+      "rating": 5,
+      "service": "Signature Gel Manicure",
+      "date": "2026-07-19",
+      "text": "Sophia’s cuticle precision is second to none. Four weeks later and my gel polish is completely chip-free with zero damage to my natural nail bed. Clean, elegant, and serene environment.",
+      "verified": true
+    }
+  ],
+  "blog": [
+    {
+      "id": "blog-1",
+      "slug": "art-of-post-summer-hair-revival",
+      "title": "The Art of Post-Summer Hair Revival: Repairing Sun, Salt & Heat",
+      "excerpt": "How targeted botanical masques, bond-rebuilding glazes, and micro-trims restore deep moisture and elasticity to sun-exposed hair.",
+      "content": "After months of UV exposure, pool chlorine, and outdoor warmth, hair fibers naturally lose moisture, lipid protection, and surface sheen. At Luxe Salon, our philosophy revolves around preventative restoration.\n\n### 1. Rebuilding Moisture & Lipids\nDirect sunlight oxidizes the natural melanin in your hair shafts while lifting the protective cuticle scale. We recommend replacing standard conditioners twice weekly with a cold-pressed lipid masque enriched with camellia and marula oils.\n\n### 2. The Power of Acidic Color Glazes\nA sheer demi-permanent gloss seals lifted cuticles, re-aligns light reflection, and neutralizes unwanted brassy undertones without lifting your natural base.\n\n### 3. Scalp Reset & Micro-Exfoliation\nHealthy strands begin with a balanced scalp biome. Bi-weekly gentle enzyme exfoliation removes mineral buildup from hard water and allows active botanical serums to penetrate deeply into follicles.",
+      "category": "Hair Care",
+      "author": "Elena Rostova",
+      "authorRole": "Creative Director",
+      "readTime": "4 min read",
+      "publishedAt": "2026-08-10",
+      "image": "/images/color-highlights.jpg"
+    },
+    {
+      "id": "blog-2",
+      "slug": "morning-rituals-for-radiant-skin",
+      "title": "Morning Rituals for Radiant Skin: Beyond the Surface Glow",
+      "excerpt": "Clinical aesthetician Chloe Chen reveals the 4 essential steps for balancing your skin barrier and maintaining all-day luminosity.",
+      "content": "Radiant skin is not about layering ten different cosmetic products—it is the result of skin barrier integrity, vascular stimulation, and targeted hydration.\n\n### Step 1: Gentle Non-Stripping Cleanse\nNever start the day with harsh foaming surfactants. Lukewarm water combined with a milky botanical cleanser preserves your lipid mantle while removing overnight cellular turnover.\n\n### Step 2: Hyaluronic Layering on Damp Skin\nAlways apply humectants while your skin is still misted with rose water or thermal essence. This allows high- and low-molecular weight hyaluronic acid to bind hydration deep within epidermis layers.\n\n### Step 3: Lymphatic Ice Sculpting\nGently sweeping cooled cryo globes or jade contours along jawline and under eyes moves stagnant fluid, depuffs contours, and immediately sharpens definition.\n\n### Step 4: Broad Spectrum Mineral Protection\nEven on overcast days, UVA wavelengths penetrate window glass. Finish with a non-comedogenic zinc oxide veil rich in antioxidants like Vitamin E and Green Tea extract.",
+      "category": "Skin Wellness",
+      "author": "Chloe Chen",
+      "authorRole": "Skin Aesthetics Lead",
+      "readTime": "5 min read",
+      "publishedAt": "2026-08-02",
+      "image": "/images/facial-skin-revival.jpg"
+    },
+    {
+      "id": "blog-3",
+      "slug": "2026-bridal-beauty-timeline",
+      "title": "The Modern Bride’s 6-Month Countdown to Effortless Elegance",
+      "excerpt": "Your comprehensive scheduling blueprint for hair color sessions, skin treatments, and makeup trials leading to wedding day perfection.",
+      "content": "Flawless wedding day beauty requires thoughtful timing. Rushing treatments within weeks of the ceremony risks unpredictable reactions or color shifts.\n\n### 6 Months Out: The Diagnostic Consultation\nMeet with your stylist to establish hair health goals, assess texture, and outline desired tone dimension. Begin a monthly scalp treatment routine.\n\n### 3 Months Out: Hair & Makeup Trial\nSchedule your trial on the morning of an engagement shoot or celebratory dinner. This provides the ideal real-world test for wear longevity, lighting, and movement.\n\n### 2 Weeks Out: Final Color Glaze & Micro-Trim\nPerform your final balayage refinement or gloss. This allows the shade to settle into its softest, most natural dimension.\n\n### 4 Days Out: Barrier Restoring Hydrafacial & Gel Spa\nA non-invasive glow facial delivers dewy skin without redness, followed by detailed cuticle grooming and long-lasting gel application.",
+      "category": "Bridal Guide",
+      "author": "Amara Diallo",
+      "authorRole": "Bridal Artistry Lead",
+      "readTime": "6 min read",
+      "publishedAt": "2026-07-22",
+      "image": "/images/bridal-styling.jpg"
+    }
+  ],
+  "contacts": []
+}

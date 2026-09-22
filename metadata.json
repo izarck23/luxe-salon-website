@@ -1,0 +1,8 @@
+{
+  "name": "Luxe Salon",
+  "description": "Full-stack luxury salon & spa platform featuring interactive service booking, Safaricom M-Pesa & Stripe deposit management, multi-currency support, administrative operations hub, real-time analytics, and automated multi-channel notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
